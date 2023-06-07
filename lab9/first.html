@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function bbs(){
+            let p = document.getElementById('word').value;
+            let q = document.getElementById('key').value;
+            fetch('http://localhost:3000/', {
+            method: 'POST',
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify(
+                {
+                    word:p,
+                    key:q
+                }
+                )
+            }).then(response =>{
+                return response.json();
+            }).then(pdata =>{
+                console.log(pdata);
+                let result = document.getElementById('result');
+                result.innerHTML+=`numbers: ${pdata.result.join(', ')}<br/>time: ${pdata.time}`
+            });
+        }
+    </script>
+    <h1>cipher</h1>
+    <input type="text" placeholder="word" id="word">
+    <input type="text" placeholder="key(num num num ...)" id="key" value="62 93 186 403 417 352 315 210">
+    <button onclick="bbs()">send</button>
+    <h1>Result</h1>
+    <p id="result"></p>
+    <a href="http://localhost:3000/decipher">decipher</a>
+</body>
+</html>

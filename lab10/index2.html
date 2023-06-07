@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let db = 0;
+        let p = 23, g = 5;
+
+        let alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r'
+        , 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+
+        function convertTo(str){
+            let result = []
+            for(let item in str){
+                for(let item1 in alphabet){
+                    if(str[item] == alphabet[item1]){
+                        result.push(+item1 + 1);
+                    }
+                }
+            }
+            return result;
+        }
+
+        // console.log(convertTo('abcd'))
+
+        function getRandomInt() {
+            return Math.floor(Math.random() * p);
+        }
+
+        fetch('http://localhost:3000/db', {method:'get'}).then(response =>{
+                return response.json();
+            }).then(pdata =>{
+                db = pdata.db;
+            });
+
+        function send(){
+            let start = performance.now();
+            let m = document.getElementById('mess').value;
+            let k = document.getElementById('key').value;
+            let resArr = convertTo(m);
+            let mess = [];
+            for(let item in resArr){
+                let r = Math.pow(g, k)%p;
+                let e = (resArr[item] * Math.pow(db, k)) % p;
+                console.log(k, r, e, resArr[item]);
+                mess.push({r, e})
+            }
+            let finish = performance.now();
+            console.log(mess);
+            for(let item in mess){
+                document.getElementById('cip').innerHTML+= `{r: ${mess[item].r}, e: ${mess[item].e}}`;
+            }
+            document.getElementById('cip').innerHTML+=`<br/>Length: ${mess.length*2}, time: ${finish-start}`
+            // console.log(r, e);
+            fetch('http://localhost:3000/agdecip', {
+            method: 'POST',
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify(
+                {
+                    data: mess
+                    // key:q
+                }
+                )
+            }).then(response =>{
+                return response.json();
+            }).then(pdata =>{
+                // console.log(pdata);
+                let result1 = '';
+                for(let item in pdata.result){
+                    result1+= alphabet[pdata.result[item] - 1] + ' ';
+                }
+                // document.getElementById('resultC').innerHTML = JSON.stringify(pdata);
+                let result = document.getElementById('result');
+                result.innerHTML+=result1;
+                // <br/>time: ${pdata.time}`
+            });
+        }
+    </script>
+
+    <input type="text" placeholder="mess" id="mess"/>
+    <input type="text" placeholder="key" id="key"/>
+    <button onclick="send()">send</button>
+    <p id="cip">cipher: </p>
+    <p id="result">result:  </p>
+</body>
+</html>

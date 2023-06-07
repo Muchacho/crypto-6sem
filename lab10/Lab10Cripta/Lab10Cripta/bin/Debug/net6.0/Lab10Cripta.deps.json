@@ -1,0 +1,67 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "Lab10Cripta/1.0.0": {
+        "dependencies": {
+          "ChartJS": "22.2.6"
+        },
+        "runtime": {
+          "Lab10Cripta.dll": {}
+        }
+      },
+      "ChartJS/22.2.6": {
+        "dependencies": {
+          "jQuery": "3.5.1",
+          "jquery-globalize": "1.1.1"
+        }
+      },
+      "cldrjs/0.4.4": {},
+      "jQuery/3.5.1": {},
+      "jquery-globalize/1.1.1": {
+        "dependencies": {
+          "cldrjs": "0.4.4"
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Lab10Cripta/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "ChartJS/22.2.6": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-iQI5nE20rtnSad6mXVy0DIvDMUgV6BCqNEYSMxchU3GXaW0XTj7ZSNI4fHtaMpZKxX6xfHSVjLK/O2pM061I9g==",
+      "path": "chartjs/22.2.6",
+      "hashPath": "chartjs.22.2.6.nupkg.sha512"
+    },
+    "cldrjs/0.4.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-QTJ2r9FpA1XOFPRguhHAFjJZZJVil5TFOUCTLpN02BjQtgXgVDpt5VFyxQp/uNwEh0InNWLdIugl2Ls1IBqfXg==",
+      "path": "cldrjs/0.4.4",
+      "hashPath": "cldrjs.0.4.4.nupkg.sha512"
+    },
+    "jQuery/3.5.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-ji6sm/AI0vjASXAA/AG9Yf5ypALAqIDXFFKPHMAnFL8kp3xqULIWhACjg/OXZP88C56frYlIej2nrdBnhTMYQQ==",
+      "path": "jquery/3.5.1",
+      "hashPath": "jquery.3.5.1.nupkg.sha512"
+    },
+    "jquery-globalize/1.1.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-tkRqYLIONjwamztg1rG+xyh2asA0ARLOPorfF3N9JW8fWr+srtPAeUNLFHF6NZAQ7Avnkzgi2OC505lK5avFag==",
+      "path": "jquery-globalize/1.1.1",
+      "hashPath": "jquery-globalize.1.1.1.nupkg.sha512"
+    }
+  }
+}

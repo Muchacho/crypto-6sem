@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function bbs(){
+            let p = document.getElementById('p').value;
+            let q = document.getElementById('q').value;
+            fetch('http://localhost:3000/', {
+            method: 'POST',
+            // mode: "no-cors",
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify(
+                {
+                    p:p,
+                    q:q
+                }
+                )
+            }).then(response =>{
+                return response.json();
+            }).then(pdata =>{
+                console.log(pdata);
+                let result = document.getElementById('result');
+                result.innerHTML+=`numbers: ${pdata[0].join(', ')}<br/>final bits: ${pdata[1].join(', ')}`
+            });
+        }
+    </script>
+    <h1>BBS</h1>
+    <input type="text" placeholder="p" id="p">
+    <input type="text" placeholder="q" id="q">
+    <button onclick="bbs()">send</button>
+    <h1>Result</h1>
+    <p id="result"></p>
+    <a href="http://localhost:3000/rc4">RC4</a>
+</body>
+</html>

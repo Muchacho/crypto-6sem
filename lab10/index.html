@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function decipher(){
+            let p = document.getElementById('wordD').value;
+            // let q = document.getElementById('keyD').value;
+            fetch('http://localhost:3000/decipher', {
+            method: 'POST',
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify(
+                {
+                    mess:p,
+                    // key:q
+                }
+                )
+            }).then(response =>{
+                return response.json();
+            }).then(pdata =>{
+                console.log(pdata);
+                let result = document.getElementById('resultD');
+                result.innerHTML+=`result: ${pdata.result}<br/>time: ${pdata.time}`
+            });
+        }
+        
+        function cipher(){
+            let p = document.getElementById('wordC').value;
+            // let q = document.getElementById('keyC').value;
+            fetch('http://localhost:3000/cipher', {
+            method: 'POST',
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify(
+                {
+                    mess:p,
+                    // key:q
+                }
+                )
+            }).then(response =>{
+                return response.json();
+            }).then(pdata =>{
+                console.log(pdata);
+                // document.getElementById('resultC').innerHTML = JSON.stringify(pdata);
+                let result = document.getElementById('resultC');
+                result.innerHTML+=`result: ${pdata.result}<br/>time: ${pdata.time}<br/>length:${pdata.length}`
+            });
+        }
+    </script>
+    <h1>cipher</h1>
+    <input type="text" placeholder="word cipher" id="wordC">
+    <!-- <input type="text" placeholder="key" id="keyC">
+    <input type="text" placeholder="key" id="keyC"> -->
+    <button onclick="cipher()">send</button>
+    <input type="text" placeholder="word decipher" id="wordD">
+    <!-- <input type="text" placeholder="key" id="keyD"> -->
+    <button onclick="decipher()">send</button>
+    <div style="border: 1px black solid;">
+        <h1>cipher</h1>
+        <p id="resultC"></p>
+    </div>
+    <div style="border: 1px black solid;">
+        <h1>decipher</h1>
+        <p id="resultD"></p>
+    </div>
+    <p id="qwe"></p>
+    
+</body>
+</html>

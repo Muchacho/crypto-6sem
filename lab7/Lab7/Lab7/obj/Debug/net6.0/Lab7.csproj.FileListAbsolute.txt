@@ -1,0 +1,30 @@
+D:\univ\6 sem\cripta\labs\Lab7\Lab7\bin\Debug\net6.0\Lab7.exe
+D:\univ\6 sem\cripta\labs\Lab7\Lab7\bin\Debug\net6.0\Lab7.deps.json
+D:\univ\6 sem\cripta\labs\Lab7\Lab7\bin\Debug\net6.0\Lab7.runtimeconfig.json
+D:\univ\6 sem\cripta\labs\Lab7\Lab7\bin\Debug\net6.0\Lab7.dll
+D:\univ\6 sem\cripta\labs\Lab7\Lab7\bin\Debug\net6.0\Lab7.pdb
+D:\univ\6 sem\cripta\labs\Lab7\Lab7\obj\Debug\net6.0\Lab7.csproj.AssemblyReference.cache
+D:\univ\6 sem\cripta\labs\Lab7\Lab7\obj\Debug\net6.0\Lab7.GeneratedMSBuildEditorConfig.editorconfig
+D:\univ\6 sem\cripta\labs\Lab7\Lab7\obj\Debug\net6.0\Lab7.AssemblyInfoInputs.cache
+D:\univ\6 sem\cripta\labs\Lab7\Lab7\obj\Debug\net6.0\Lab7.AssemblyInfo.cs
+D:\univ\6 sem\cripta\labs\Lab7\Lab7\obj\Debug\net6.0\Lab7.csproj.CoreCompileInputs.cache
+D:\univ\6 sem\cripta\labs\Lab7\Lab7\obj\Debug\net6.0\Lab7.dll
+D:\univ\6 sem\cripta\labs\Lab7\Lab7\obj\Debug\net6.0\refint\Lab7.dll
+D:\univ\6 sem\cripta\labs\Lab7\Lab7\obj\Debug\net6.0\Lab7.pdb
+D:\univ\6 sem\cripta\labs\Lab7\Lab7\obj\Debug\net6.0\Lab7.genruntimeconfig.cache
+D:\univ\6 sem\cripta\labs\Lab7\Lab7\obj\Debug\net6.0\ref\Lab7.dll
+D:\projects\BSTU\6\kmzi\Lab7\Lab7\bin\Debug\net6.0\Lab7.exe
+D:\projects\BSTU\6\kmzi\Lab7\Lab7\bin\Debug\net6.0\Lab7.deps.json
+D:\projects\BSTU\6\kmzi\Lab7\Lab7\bin\Debug\net6.0\Lab7.runtimeconfig.json
+D:\projects\BSTU\6\kmzi\Lab7\Lab7\bin\Debug\net6.0\Lab7.dll
+D:\projects\BSTU\6\kmzi\Lab7\Lab7\bin\Debug\net6.0\Lab7.pdb
+D:\projects\BSTU\6\kmzi\Lab7\Lab7\obj\Debug\net6.0\Lab7.csproj.AssemblyReference.cache
+D:\projects\BSTU\6\kmzi\Lab7\Lab7\obj\Debug\net6.0\Lab7.GeneratedMSBuildEditorConfig.editorconfig
+D:\projects\BSTU\6\kmzi\Lab7\Lab7\obj\Debug\net6.0\Lab7.AssemblyInfoInputs.cache
+D:\projects\BSTU\6\kmzi\Lab7\Lab7\obj\Debug\net6.0\Lab7.AssemblyInfo.cs
+D:\projects\BSTU\6\kmzi\Lab7\Lab7\obj\Debug\net6.0\Lab7.csproj.CoreCompileInputs.cache
+D:\projects\BSTU\6\kmzi\Lab7\Lab7\obj\Debug\net6.0\Lab7.dll
+D:\projects\BSTU\6\kmzi\Lab7\Lab7\obj\Debug\net6.0\refint\Lab7.dll
+D:\projects\BSTU\6\kmzi\Lab7\Lab7\obj\Debug\net6.0\Lab7.pdb
+D:\projects\BSTU\6\kmzi\Lab7\Lab7\obj\Debug\net6.0\Lab7.genruntimeconfig.cache
+D:\projects\BSTU\6\kmzi\Lab7\Lab7\obj\Debug\net6.0\ref\Lab7.dll

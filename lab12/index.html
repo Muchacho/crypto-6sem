@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let n = 33, e = 7, d = 3;
+
+        function getCodeArr(str){
+            let result = [];
+            for(let i = 0; i < str.length; i++){
+                result.push(String(str[i]).charCodeAt());
+            }
+            return result;
+        }
+
+        function getModul(c, e, n, r){
+            if(e == 0) return r;
+            let ret = (c * r) % n;
+            return getModul(c, e - 1, n, ret);
+        }
+
+        function rsa_cip(mess){
+            let start = performance.now();
+            let messArr = getCodeArr(mess);
+            let result = [];
+            for(let item in messArr){
+                result.push(getModul(messArr[item], e, n, 1));
+            }
+            console.log(result);
+            let finish = performance.now()
+            return result;
+        }
+
+        function rsa_sign(mess){
+            let h = mess[mess.length - 1];
+            let sign = getModul(h, d, n, 1);
+            return sign;
+        }
+
+        function send(){
+            let start = performance.now();
+            let mess = document.getElementById('mess').value;
+            let messcip = rsa_cip(mess);
+            let sign = rsa_sign(messcip);
+            console.log(messcip, sign);
+            fetch('http://localhost:3000/checkRSA', {
+                method:"POST",
+                headers: {'Content-Type': 'application/json'},
+                body: JSON.stringify(
+                    {
+                        data: {messcip, sign, e}
+                    // key:q
+                    }
+                )
+            }).then(response =>{
+                return response.json();
+            }).then(pdata =>{
+                console.log(pdata);
+                let result = document.getElementById('result');
+                result.innerHTML+=`signature: ${pdata.sign}<br/>valid: ${pdata.valid}<br/>`
+                let finish = performance.now();
+                console.log(finish-start);
+            });
+        }
+    </script>
+</head>
+<body>
+    <h1>rsa</h1>
+    <input type="text" placeholder="mess" id="mess"/>
+    <button onclick="send()">send</button>
+    <p id="result">result: </p>
+</body>
+</html>

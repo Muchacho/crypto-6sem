@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function rc4(){
+            let p = document.getElementById('word').value;
+            let q = document.getElementById('key').value;
+            fetch('http://localhost:3000/rc4', {
+            method: 'POST',
+            // mode: "no-cors",
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify(
+                {
+                    word:p,
+                    key:q
+                }
+                )
+            }).then(response =>{
+                return response.json();
+            }).then(pdata =>{
+                console.log(pdata);
+                let result = document.getElementById('result');
+                result.innerHTML=`text: ${pdata.result.join('')}<br/>time: ${pdata.time}`
+            });
+        }
+    </script>
+    <h1>RC4</h1>
+    <input type="text" placeholder="word" id="word">
+    <input type="text" placeholder="key(num num num ...)" id="key">
+    <button onclick="rc4()">send</button>
+    <h1>Result</h1>
+    <p id="result"></p>
+    <a href="http://localhost:3000/">BBS</a>
+</body>
+</html>
+

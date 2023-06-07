@@ -1,0 +1,4 @@
+ceaserCipherTime = 6.073300004005432
+ceaserDeipherTime = 2.051200032234192
+trisemusCipherTime = 8.035099983215332
+trisemusDecipherTime = 6.042600035667419

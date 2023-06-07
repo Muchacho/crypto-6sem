@@ -1,0 +1,11 @@
+D:\projects\BSTU\6\kmzi\labs\12-13\12-15\lw14\lw14\lab_14\bin\Debug\lab_14.exe.config
+D:\projects\BSTU\6\kmzi\labs\12-13\12-15\lw14\lw14\lab_14\bin\Debug\lab_14.exe
+D:\projects\BSTU\6\kmzi\labs\12-13\12-15\lw14\lw14\lab_14\bin\Debug\lab_14.pdb
+D:\projects\BSTU\6\kmzi\labs\12-13\12-15\lw14\lw14\lab_14\obj\Debug\lab_14.csproj.AssemblyReference.cache
+D:\projects\BSTU\6\kmzi\labs\12-13\12-15\lw14\lw14\lab_14\obj\Debug\lab_14.csproj.SuggestedBindingRedirects.cache
+D:\projects\BSTU\6\kmzi\labs\12-13\12-15\lw14\lw14\lab_14\obj\Debug\lab_14.Form1.resources
+D:\projects\BSTU\6\kmzi\labs\12-13\12-15\lw14\lw14\lab_14\obj\Debug\lab_14.Properties.Resources.resources
+D:\projects\BSTU\6\kmzi\labs\12-13\12-15\lw14\lw14\lab_14\obj\Debug\lab_14.csproj.GenerateResource.cache
+D:\projects\BSTU\6\kmzi\labs\12-13\12-15\lw14\lw14\lab_14\obj\Debug\lab_14.csproj.CoreCompileInputs.cache
+D:\projects\BSTU\6\kmzi\labs\12-13\12-15\lw14\lw14\lab_14\obj\Debug\lab_14.exe
+D:\projects\BSTU\6\kmzi\labs\12-13\12-15\lw14\lw14\lab_14\obj\Debug\lab_14.pdb

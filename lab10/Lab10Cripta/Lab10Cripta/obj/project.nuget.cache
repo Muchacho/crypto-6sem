@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "CdNrm2StWV7dIIoPM9C9Eoh3JecHuK//npHjn9Mzd0sJHiZCzGpqM0USZ3CW35xrIR+PIOB8VgZsZ+SCwhic9Q==",
+  "success": true,
+  "projectFilePath": "D:\\univ\\6 sem\\cripta\\labs\\Lab10Cripta\\Lab10Cripta\\Lab10Cripta.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\skinc\\.nuget\\packages\\chartjs\\22.2.6\\chartjs.22.2.6.nupkg.sha512",
+    "C:\\Users\\skinc\\.nuget\\packages\\cldrjs\\0.4.4\\cldrjs.0.4.4.nupkg.sha512",
+    "C:\\Users\\skinc\\.nuget\\packages\\jquery\\3.5.1\\jquery.3.5.1.nupkg.sha512",
+    "C:\\Users\\skinc\\.nuget\\packages\\jquery-globalize\\1.1.1\\jquery-globalize.1.1.1.nupkg.sha512"
+  ],
+  "logs": []
+}
